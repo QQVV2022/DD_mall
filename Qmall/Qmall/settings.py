@@ -28,9 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+print("os.path.join(BASE_DIR",BASE_DIR)
 # Application definition
-sys.path.insert(0,os.path.join(BASE_DIR,"apps"))
+sys.path.insert(0, os.path.join(BASE_DIR, "apps"))
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,10 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'users',
+    'user',
+    # CORS
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    # CORS put to the topest
+    'corsheaders.middleware.CorsMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -80,11 +85,12 @@ WSGI_APPLICATION = 'Qmall.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'qmall',
+        'USER': 'root',
+        'PASSWORD': 'root',
         'HOST': '127.0.0.1',
-        'PORT': 3306,
-        'USER': 'liuq',
-        'PASSWORD': '123456',
-        'NAME': 'qmall' # db name
+        'PORT':3306,
+        # 'NAME': 'qmall' # db name
     },
 }
 
@@ -112,51 +118,39 @@ LOGGING = {
     'disable_existing_loggers': False,
     'formatters': {
         'verbose': {
-            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
-            'style': '{',
+            'format': '%(levelname)s %(asctime)s %(module)s %(lineno)d %(message)s'
         },
         'simple': {
-            'format': '{levelname} {module} {lineno:d} {message}',
-            'style': '{',
+            'format': '%(levelname)s %(module)s %(lineno)d %(message)s'
         },
     },
     'filters': {
-        'special': {
-            '()': 'project.logging.SpecialFilter',
-            # 'foo': 'bar',
-        },
         'require_debug_true': {
             '()': 'django.utils.log.RequireDebugTrue',
         },
     },
     'handlers': {
-        'console': {
+        'console': {  # output file
             'level': 'INFO',
             'filters': ['require_debug_true'],
             'class': 'logging.StreamHandler',
             'formatter': 'simple'
         },
-        'mail_admins': {
-            'level': 'ERROR',
-            'class': 'django.utils.log.AdminEmailHandler',
-            'filters': ['special']
-        }
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/meiduo.log'),
+            'maxBytes': 300 * 1024 * 1024,  # 300M per file
+            'backupCount': 10,  # 10 files
+            'formatter': 'verbose'
+        },
     },
     'loggers': {
-        'django': {
-            'handlers': ['console'],
+        'django': {  # logger name is django
+            'handlers': ['console', 'file'],
             'propagate': True,
-        },
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': False,
-        },
-        'myproject.custom': {
-            'handlers': ['console', 'mail_admins'],
             'level': 'INFO',
-            'filters': ['special']
-        }
+        },
     }
 }
 
@@ -179,7 +173,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+AUTH_USER_MODEL = 'user.User'  # users model
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 LANGUAGE_CODE = 'en-us'
@@ -205,3 +199,9 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CORS_ORIGIN_WHITELIST = (
+    'http://127.0.0.1:8080',
+    'http://localhost:8080'
+)
+CORS_ALLOW_CREDENTIALS = True  # allow cookies
