@@ -1,0 +1,106 @@
+INFO 2021-12-04 20:37:28,105 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:38:50,484 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-04 20:38:51,130 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:40:04,439 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-04 20:40:05,333 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:40:25,818 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-04 20:40:26,477 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:40:32,729 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-04 20:40:33,338 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:41:04,988 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-04 20:41:05,681 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:42:18,029 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:42:29,438 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/users/urls.py changed, reloading.
+INFO 2021-12-04 20:42:30,375 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:43:46,906 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:44:41,874 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:54:06,778 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:56:18,721 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-04 20:56:19,623 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:57:08,206 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:57:12,502 basehttp 161 "GET / HTTP/1.1" 200 10697
+INFO 2021-12-04 20:57:12,563 basehttp 161 "GET /static/admin/css/fonts.css HTTP/1.1" 304 0
+INFO 2021-12-04 20:57:12,688 basehttp 161 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+INFO 2021-12-04 20:57:12,690 basehttp 161 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2021-12-04 20:57:12,691 basehttp 161 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO 2021-12-04 20:58:03,789 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/urls.py changed, reloading.
+INFO 2021-12-04 20:58:04,692 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:58:56,932 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/urls.py changed, reloading.
+INFO 2021-12-04 20:58:57,330 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:59:27,144 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 20:59:38,557 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/urls.py changed, reloading.
+INFO 2021-12-04 20:59:38,977 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-04 21:00:42,348 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/urls.py changed, reloading.
+INFO 2021-12-04 21:00:43,226 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 09:29:57,481 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/urls.py changed, reloading.
+INFO 2021-12-05 09:29:58,767 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 09:35:40,988 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/urls.py changed, reloading.
+INFO 2021-12-05 09:35:41,878 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 09:35:59,419 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-05 09:36:00,175 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 09:36:31,023 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-05 09:36:31,578 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 09:39:23,018 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-05 09:39:24,016 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 09:39:35,336 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 09:40:20,365 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-05 09:40:21,225 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 10:05:17,686 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/models.py changed, reloading.
+INFO 2021-12-05 10:05:18,665 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 10:10:18,970 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 10:11:13,231 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-05 10:11:13,988 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 10:15:03,497 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/models.py changed, reloading.
+INFO 2021-12-05 10:15:04,623 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 10:16:49,833 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/models.py changed, reloading.
+INFO 2021-12-05 10:16:50,903 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 10:19:13,817 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/apps.py changed, reloading.
+INFO 2021-12-05 10:19:14,882 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 10:20:10,201 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/urls.py changed, reloading.
+INFO 2021-12-05 10:20:11,025 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 22:40:36,547 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-05 22:40:38,133 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 22:45:51,016 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/Qmall/settings.py changed, reloading.
+INFO 2021-12-05 22:45:51,904 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 22:58:47,916 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-05 22:58:49,379 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 23:08:14,313 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-05 23:08:16,301 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 23:08:42,132 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-05 23:08:42,612 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 23:12:27,513 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-05 23:12:28,821 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 23:16:16,789 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/urls.py changed, reloading.
+INFO 2021-12-05 23:16:18,233 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 23:31:22,856 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/urls.py changed, reloading.
+INFO 2021-12-05 23:31:23,988 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-05 23:34:40,543 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/urls.py changed, reloading.
+INFO 2021-12-05 23:34:42,205 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:12:34,965 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:12:36,238 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:14:17,126 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:14:18,109 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:19:00,089 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:19:01,409 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:31:56,371 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:31:57,929 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:35:24,474 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:35:25,378 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:35:42,979 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:35:43,790 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:35:59,267 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:36:00,148 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:36:55,359 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:36:56,278 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:38:23,098 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:38:24,043 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:44:22,206 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:44:23,366 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:51:28,132 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:51:29,409 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:56:09,550 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:56:10,847 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-06 23:59:32,075 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-06 23:59:33,396 autoreload 637 Watching for file changes with StatReloader
+INFO 2021-12-07 00:00:59,391 autoreload 251 /Users/sylvia/Desktop/github/github_qmall/qmall/Qmall/apps/user/views.py changed, reloading.
+INFO 2021-12-07 00:01:00,900 autoreload 637 Watching for file changes with StatReloader

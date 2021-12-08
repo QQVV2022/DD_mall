@@ -6,11 +6,13 @@ var vm = new Vue({
         error_name: false,
         error_password: false,
         error_check_password: false,
-        error_phone: false,
+        error_phone: false,  //  dont use phone
+        error_email: false,  // lq
         error_allow: false,
         error_sms_code: false,
         error_name_message: '',
         error_phone_message: '',
+        error_email_message: '',  //lq
         error_sms_code_message: '',
         error_image_code:'',
 
@@ -25,6 +27,7 @@ var vm = new Vue({
         password: '',
         password2: '',
         mobile: '',
+        email: '',  //lq
         sms_code: '',
         allow: false,
         image_code:'',
@@ -52,10 +55,10 @@ var vm = new Vue({
                 this.error_name_message = '请输入5-20个字符的用户名且不能为纯数字';
                 this.error_name = true;
             }
-            // 检查重名
+
             if (this.error_name == false) {
                 var url = this.host + '/usernames/' + this.username + '/count/';
-                // vue 如何发送 ajax 请求呢？axios 
+
                 axios.get(url, {
                     responseType: 'json',
                     withCredentials:true,
@@ -88,6 +91,35 @@ var vm = new Vue({
                 this.error_check_password = false;
             }
         },
+        // Check email format
+        check_email: function () {
+                    var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+                    if (re.test(this.email)) {
+                        this.error_email = false;
+                    } else {
+                        this.error_email_message = 'Email format is not correct!!!';
+                        this.error_email = true;
+                    }
+                    if (this.error_email == false) {
+                        var url = this.host + '/email/' + this.email + '/count/';
+                        axios.get(url, {
+                            responseType: 'json',
+                             withCredentials:true,
+                        })
+                            .then(response => {
+                                if (response.data.count > 0) {
+                                    this.error_email_message = 'Email existes!!!';
+                                    this.error_email = true;
+                                } else {
+                                    this.error_email = false;
+                                }
+                            })
+                            .catch(error => {
+                                console.log(error.response);
+                            })
+                    }
+                },
         // 检查手机号
         check_phone: function () {
             var re = /^1[345789]\d{9}$/;
@@ -198,8 +230,10 @@ var vm = new Vue({
             this.check_username();
             this.check_pwd();
             this.check_cpwd();
-            this.check_phone();
-            this.check_sms_code();
+
+            this.check_email();
+            //this.check_phone();
+            //this.check_sms_code();
             this.check_allow();
 
 

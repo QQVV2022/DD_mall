@@ -39,16 +39,25 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'user',
+    'verification',
     # CORS
     'corsheaders',
+
+    'captcha',  # https://github.com/praekelt/django-recaptcha
 ]
 
+RECAPTCHA_PUBLIC_KEY = "6LcJHocdAAAAAAIT2vXp6NHDf6WrvE2Zz8u_BExj"
+RECAPTCHA_PRIVATE_KEY = "6LcJHocdAAAAAIFwwsAsRU765y4GnBR_5IIUjwUm"
+
+# RECAPTCHA_PROXY = {'http': 'http://127.0.0.1:8080'}
+
+
 MIDDLEWARE = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     # CORS put to the topest
     'corsheaders.middleware.CorsMiddleware',
 
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
