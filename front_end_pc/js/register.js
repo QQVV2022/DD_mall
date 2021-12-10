@@ -1,3 +1,4 @@
+
 var vm = new Vue({
     el: '#app',
     data: {
@@ -31,11 +32,12 @@ var vm = new Vue({
         sms_code: '',
         allow: false,
         image_code:'',
-        error_image_code_message:''
+        error_image_code_message:'',
+
     },
     mounted: function(){
 		// 向服务器获取图片验证码
-		this.generate_image_code();
+//		this.generate_image_code();
 	},
     methods: {
         // 生成一个图片验证码的编号，并设置页面中图片验证码img标签的src属性
@@ -45,6 +47,7 @@ var vm = new Vue({
 			// 设置页面中图片验证码img标签的src属性
 			this.image_code_url = this.host + "/image_codes/" + this.image_code_id + "/";
 		},
+
         // 检查用户名
         check_username: function () {
             var re = /^[a-zA-Z0-9_-]{5,20}$/;
@@ -94,7 +97,7 @@ var vm = new Vue({
         // Check email format
         check_email: function () {
                     var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
+                    // alert(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email))
                     if (re.test(this.email)) {
                         this.error_email = false;
                     } else {
@@ -225,6 +228,18 @@ var vm = new Vue({
                     this.sending_flag = false;
                 })
         },
+        // check recaptcha
+        check_recaptcha: function () {
+            var response = grecaptcha.getResponse();
+              if(response.length == 0)
+              {
+                //reCaptcha not verified
+                alert("please verify you are human!");
+
+                return false;
+              }
+        },
+
         // 注册
         on_submit: function () {
             this.check_username();
@@ -236,8 +251,6 @@ var vm = new Vue({
             //this.check_sms_code();
             this.check_allow();
 
-
-
             // 点击注册按钮之后, 发送请求 (下面的代码是通过请求体传参的)
             if (this.error_name == false && this.error_password == false && this.error_check_password == false
                 && this.error_phone == false && this.error_sms_code == false && this.error_allow == false) {
@@ -245,8 +258,9 @@ var vm = new Vue({
                     username: this.username,
                     password: this.password,
                     password2: this.password2,
-                    mobile: this.mobile,
-                    sms_code: this.sms_code,
+                    email: this.email,
+                    //mobile: this.mobile,
+                   // sms_code: this.sms_code,
                     allow: this.allow
                 }, {
                     responseType: 'json',
@@ -275,4 +289,5 @@ var vm = new Vue({
             }
         }
     }
+
 });
