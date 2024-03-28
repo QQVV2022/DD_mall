@@ -15,3 +15,7 @@ $pip list $pip freeze > requirements.txt
 $pip install -r requirements.txt
 
 Docker run:
+$docker compose up
+$docker stop dd_mall-db-1 dd_mall-backend-1
+$docker rm dd_mall-db-1 dd_mall-backend-1
+$doker rmi dd_mall-backend
