@@ -3,7 +3,7 @@ version: '3.9'
 services:
   backend:
     build:
-      context: DD_mall
+      context: .
     command: >
       sh -c "python manage.py runserver 0.0.0.0:8000"
     ports:
@@ -34,7 +34,7 @@ services:
     ports:
       - 33066:3306
     environment:
-      - DB_NAME=qmall
-      - DB_USER=root
-      - DB_PASS=root
-      - DB_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=qmall
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_ROOT_PASSWORD=root

@@ -5,7 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c520b0a-6b61-49aa-a866-5bfa12a4c097" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../awsTest/.idea/awsTest.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../greatKartForAWS/.idea/greatKartForAWS.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../linkedinApplyBot/.idea/linkedinApplyBot.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python_micro/djangoProject/.idea/django_micro.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../python_micro/flask_micro/.idea/flask_micro.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dbdata/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/ib_buffer_pool" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dbdata/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/ib_logfile0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dbdata/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/ibdata1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dbdata/ibtmp1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +46,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "qing",
     "last_opened_file_path": "/Users/sylvia/Desktop/workplace/DD_mall",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -62,6 +76,7 @@
       <workItem from="1711560583979" duration="2930000" />
       <workItem from="1711563575637" duration="708000" />
       <workItem from="1711585667572" duration="112000" />
+      <workItem from="1711585793367" duration="1002000" />
     </task>
     <servers />
   </component>

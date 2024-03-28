@@ -4,11 +4,13 @@ LABEL maintainer="Quinn"
 ENV PYTHONUNBUFFERED 1
 
 RUN mkdir app
+COPY ./requirements.txt /app/DD_mall/requirements.txt
 COPY ./DD_mall /app/DD_mall
 COPY ./web /app/web
 
 ## production?
 COPY scripts /scripts
+WORKDIR /app/DD_mall
 
 RUN python -m venv /py && \
     /py/bin/pip install --upgrade pip && \
@@ -28,7 +30,6 @@ RUN python -m venv /py && \
 ## Chown all the files to the app user.
 #RUN chown -R app:xyzgroup /app/DD_mall
 
-WORKDIR /app/DD_mall
 EXPOSE 8000
 
 ENV PATH="/scripts:/py/bin:$PATH"
