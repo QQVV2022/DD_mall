@@ -1,31 +1,40 @@
 version: '3.9'
 
 services:
-  app:
+  backend:
     build:
-      context: .
+      context: DD_mall
     command: >
-      sh -c "python manage.py wait_for_db &&
-             python manage.py migrate &&
-             python manage.py runserver 0.0.0.0:8000"
+      sh -c "python manage.py runserver 0.0.0.0:8000"
     ports:
       - 8000:8000
     volumes:
-      - ./app:/app
-      - ./data/web:/vol/web
+      - ./DD_mall:/app/DD_mall
+      - ./web:/app/web
     environment:
-      - SECRET_KEY=devsecretkey
-      - DEBUG=1
       - DB_HOST=db
-      - DB_NAME=devdb
-      - DB_USER=devuser
-      - DB_PASS=changeme
+      - SECRET_KEY='django-insecure-m*h&9iud914!-679*+la$ih1jgja8y04robxqg(zbjgxyswjev'
+      - ALLOWED_HOSTS=127.0.0.1
+      - DEBUG=1
+      - EMAIL_HOST='smtp.gmail.com'
+      - EMAIL_PORT=587
+      - EMAIL_HOST_USER='emailtest3033@gmail.com'
+      - EMAIL_HOST_PASSWORD='Em23321825'
+      - EMAIL_FROM='emailtest3033@gmail.com'
+      - EMAIL_USE_TLS=True
+      - EMAIL_USE_SSL=False
     depends_on:
       - db
 
   db:
-    image: postgres:13-alpine
+    image: mysql:5.7.22
+    restart: always
+    volumes:
+      - .dbdata:/var/lib/mysql
+    ports:
+      - 33066:3306
     environment:
-      - POSTGRES_DB=devdb
-      - POSTGRES_USER=devuser
-      - POSTGRES_PASSWORD=changeme
+      - DB_NAME=qmall
+      - DB_USER=root
+      - DB_PASS=root
+      - DB_ROOT_PASSWORD=root
