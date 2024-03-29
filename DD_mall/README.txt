@@ -32,3 +32,5 @@ on backend container:
 $ mysql -P 3306 -h db --protocol=tcp -u root -p qmall
 on mac:
 $ mysql -P 33066 --protocol=tcp -u root -p qmall --ssl-mode=DISABLED
+
+-------------init finish------------------------

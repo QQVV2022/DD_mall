@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-import os
+import os, sys
 from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,7 +37,7 @@ ALLOWED_HOSTS.extend(
 
 
 # Application definition
-
+sys.path.insert(0, os.path.join(BASE_DIR, 'apps'))
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',  #
     'corsheaders',  #
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -95,12 +96,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         # 'HOST': config('DB_HOST'),
         'HOST': 'db',
-        'NAME': config('DB_NAME'),
+        'NAME': 'qmall',
         'USER': config('DB_USER'),
         'PASSWORD': config('DB_PASS'),
         'PORT': '3306',
     }
 }
+print("config('DB_NAME')",config('DB_NAME'))
 
 
 # Password validation
@@ -139,7 +141,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/static/'  # url router to
+# STATIC_DIR = os.path.join(BASE_DIR, 'static') # url route to this dir. not to use dynamic source
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
