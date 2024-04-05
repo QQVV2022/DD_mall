@@ -18,8 +18,13 @@ $pip list $pip freeze > requirements.txt
 $pip install -r requirements.txt
 
 Docker run:
+$open -a Docker
 $docker compose up
 $docker stop dd_mall-db-1 dd_mall-backend-1
+
+$docker container start dd_mall-db-1
+$docker start -a dd_mall-backend-1
+
 $docker rm dd_mall-db-1 dd_mall-backend-1
 $docker rmi dd_mall-backend
 
@@ -34,3 +39,5 @@ on mac:
 $ mysql -P 33066 --protocol=tcp -u root -p qmall --ssl-mode=DISABLED
 
 -------------init finish------------------------
+front end run:
+$python -m http:server 8080
