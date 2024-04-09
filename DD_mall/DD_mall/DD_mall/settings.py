@@ -28,12 +28,13 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = bool(int(config('DEBUG', 0)))
 
 ALLOWED_HOSTS = []
-ALLOWED_HOSTS.extend(
-    filter(
-        None,
-        config('ALLOWED_HOSTS', '').split(','),
-    )
-)
+# ALLOWED_HOSTS.extend(
+#     filter(
+#         None,
+#         config('ALLOWED_HOSTS', '').split(','),
+#     )
+# )
+
 
 
 # Application definition
@@ -61,6 +62,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CORS_ALLOWED_ORIGINS = []
+CORS_ALLOWED_ORIGINS.extend(
+    filter(
+        None,
+        config('CORS_ALLOWED', '').split(','),
+    )
+)
+CORS_ALLOW_CREDENTIALS = True  # allow cookie
+
 ROOT_URLCONF = 'DD_mall.urls'
 
 TEMPLATES = [
@@ -85,12 +95,12 @@ WSGI_APPLICATION = 'DD_mall.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -197,7 +207,7 @@ LOGGING = {
         'file': {  # 向文件中输出日志
             'level': 'INFO',
             'class': 'logging.handlers.RotatingFileHandler',
-            'filename': os.path.join(os.path.dirname(Path(__file__).resolve().parent), "logs/meiduo.log"),  # 日志文件的位置
+            'filename': os.path.join(os.path.dirname(Path(__file__).resolve().parent), "logs/ddmall.log"),  # 日志文件的位置
             'maxBytes': 300 * 1024 * 1024,
             'backupCount': 10,
             'formatter': 'verbose'
@@ -212,7 +222,7 @@ LOGGING = {
     }
 }
 
-REST_FRAMEWORK = {
-    # 异常处理
-    'EXCEPTION_HANDLER': 'meiduo_mall.utils.exceptions.exception_handler',
-}
+# REST_FRAMEWORK = {
+#     # 异常处理
+#     'EXCEPTION_HANDLER': 'DD_mall.utils.exceptions.exception_handler',
+# }
