@@ -3,9 +3,12 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-# from .models import Product, User
+from apps.users.models import User
+
+
+
 # from .producer import publish
-# from .serializers import ProductSerializer
+# from .serializers import User
 # import random
 
 
@@ -42,10 +45,12 @@ from rest_framework.views import APIView
 #         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-# class UserAPIView(APIView):
-#     def get(self, _):
-#         users = User.objects.all()
-#         user = random.choice(users)
-#         return Response({
-#             'id': user.id
-#         })
+class UserAPIView(APIView):
+    def get(self, request, username):
+        print('-------dd---')
+        count = User.objects.filter(username=username).count()
+        return Response({
+            'code':count,
+            'count': 22,
+            'errmsg': 'ok'
+        })

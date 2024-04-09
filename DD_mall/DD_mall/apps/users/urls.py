@@ -1,6 +1,7 @@
-# from .views import ProductViewSet, UserAPIView
-#
-# urlpatterns = [
+from .views import UserAPIView
+from django.urls import path
+
+urlpatterns = [
 #     path('products', ProductViewSet.as_view({
 #         'get': 'list',
 #         'post': 'create'
@@ -10,5 +11,5 @@
 #         'put': 'update',
 #         'delete': 'destroy'
 #     })),
-#     path('user', UserAPIView.as_view())
-# ]
+    path('usernames/<username>/count/', UserAPIView.as_view()),
+]

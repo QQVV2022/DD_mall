@@ -23,8 +23,7 @@ $open -a Docker
 $docker compose up
 $docker stop dd_mall-db-1 dd_mall-backend-1
 
-$docker container start dd_mall-db-1
-$docker container start dd_mall-redis-1
+$docker container start dd_mall-db-1 dd_mall-redis-1
 $docker start -a dd_mall-backend-1
 
 $docker rm dd_mall-db-1 dd_mall-backend-1
@@ -48,4 +47,7 @@ $redis-cli -h 127.0.0.1 -p 63798
 
 -------------init finish------------------------
 front end run:
-$python -m http:server 8080
+$npm install -g live-server
+config the hose in js/host.js
+$ cd web/static
+$live-server
