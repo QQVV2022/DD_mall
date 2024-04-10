@@ -11,5 +11,5 @@ urlpatterns = [
 #         'put': 'update',
 #         'delete': 'destroy'
 #     })),
-    path('usernames/<username>/count/', UserAPIView.as_view()),
+    path('usernames/<username:username>/count/', UserAPIView.as_view()),  # use converter username
 ]

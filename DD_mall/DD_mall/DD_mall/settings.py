@@ -52,9 +52,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',  # top
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',  #
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -112,7 +112,6 @@ DATABASES = {
         'PORT': '3306',
     }
 }
-print("config('DB_NAME')",config('DB_NAME'))
 
 
 # Password validation
@@ -222,7 +221,7 @@ LOGGING = {
     }
 }
 
-# REST_FRAMEWORK = {
-#     # 异常处理
-#     'EXCEPTION_HANDLER': 'DD_mall.utils.exceptions.exception_handler',
-# }
+REST_FRAMEWORK = {
+    # 异常处理
+    'EXCEPTION_HANDLER': 'utils.exceptions.exception_handler',
+}
