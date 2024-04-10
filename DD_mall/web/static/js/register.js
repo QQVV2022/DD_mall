@@ -90,7 +90,7 @@ var vm = new Vue({
         },
         // 检查手机号
         check_phone: function () {
-            var re = /^1[345789]\d{9}$/;
+            var re = /^1[345789]\d{9}$/; //email /^\S+@\S+\.\S+$/
 
             if (re.test(this.mobile)) {
                 this.error_phone = false;
@@ -198,8 +198,8 @@ var vm = new Vue({
             this.check_username();
             this.check_pwd();
             this.check_cpwd();
-            this.check_phone();
-            this.check_sms_code();
+            // this.check_phone();
+            // this.check_sms_code();
             this.check_allow();
 
 

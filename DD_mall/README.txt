@@ -21,10 +21,10 @@ $pip install -r requirements.txt
 Docker run:
 $open -a Docker
 $docker compose up
-$docker stop dd_mall-db-1 dd_mall-backend-1
+$docker stop dd_mall-backend2-1 dd_mall-db-1 dd_mall-redis-1
 
 $docker container start dd_mall-db-1 dd_mall-redis-1
-$docker start -a dd_mall-backend-1
+$docker start -a dd_mall-backend2-1
 
 $docker rm dd_mall-db-1 dd_mall-backend-1
 $docker rmi dd_mall-backend

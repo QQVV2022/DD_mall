@@ -3,7 +3,9 @@ from rest_framework import viewsets, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from apps.users.models import User
+from .models import User
+
+import re
 
 
 
@@ -47,10 +49,9 @@ from apps.users.models import User
 
 class UserAPIView(APIView):
     def get(self, request, username):
-        print('-------dd---')
         count = User.objects.filter(username=username).count()
         return Response({
-            'code':count,
-            'count': 22,
+            'code': 0,
+            'count': count,
             'errmsg': 'ok'
         })

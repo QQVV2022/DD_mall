@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from apps.users.models import User
+from .models import User
 
-class ProductSerializer(serializers.ModelSerializer):
+class CreateUserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = '__all__'
+        fields = ('id', 'username', 'password', 'password2', 'sms_code', 'mobile', 'allow')
 
