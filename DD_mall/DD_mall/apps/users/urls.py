@@ -1,5 +1,6 @@
-from .views import UserAPIView
+from .views import UsernameCountView, EmailCountView, CreateUserAPIView
 from django.urls import path
+from django.conf.urls import url
 
 urlpatterns = [
 #     path('products', ProductViewSet.as_view({
@@ -11,5 +12,18 @@ urlpatterns = [
 #         'put': 'update',
 #         'delete': 'destroy'
 #     })),
-    path('usernames/<username:username>/count/', UserAPIView.as_view()),  # use converter username
+#     url(r'^usernames/(?P<username>\w{3,20})/count/$',UsernameCountView.as_view()),
+#     url(r'^mobiles/<str:email>/count/$',EmailCountView.as_view()),
+    path('mobiles/<emailname>/count/', EmailCountView.as_view()),
+    path('usernames/<username>/count/', UsernameCountView.as_view()),
+    path('register/', CreateUserAPIView.as_view()),
+
+
+
 ]
+
+# 路由router
+from rest_framework.routers import DefaultRouter
+router = DefaultRouter()
+# router.register('addresses',views.AddressViewSet,base_name='addresses')
+urlpatterns += router.urls

@@ -5,20 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7c520b0a-6b61-49aa-a866-5bfa12a4c097" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/DD_mall/utils/converters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dbdata/ib_buffer_pool" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/ib_buffer_pool" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dbdata/ib_logfile0" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/ib_logfile0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dbdata/ibdata1" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/ibdata1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.dbdata/ibtmp1" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/ibtmp1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dbdata/qmall/tb_user.frm" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/qmall/tb_user.frm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dbdata/qmall/tb_user.ibd" beforeDir="false" afterPath="$PROJECT_DIR$/.dbdata/qmall/tb_user.ibd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DD_mall/DD_mall/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD_mall/DD_mall/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DD_mall/DD_mall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD_mall/DD_mall/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DD_mall/apps/users/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD_mall/apps/users/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DD_mall/apps/users/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD_mall/apps/users/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DD_mall/apps/users/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD_mall/apps/users/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DD_mall/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD_mall/apps/users/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DD_mall/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD_mall/apps/users/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DD_mall/utils/converters.py" beforeDir="false" afterPath="$PROJECT_DIR$/DD_mall/utils/converters.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/web/static/js/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/js/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/static/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/web/static/register.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,6 +130,9 @@
       <workItem from="1711585793367" duration="1002000" />
       <workItem from="1712080091432" duration="2582000" />
       <workItem from="1712340247124" duration="9162000" />
+      <workItem from="1713373376582" duration="5597000" />
+      <workItem from="1713848832401" duration="35000" />
+      <workItem from="1713993723083" duration="11765000" />
     </task>
     <servers />
   </component>

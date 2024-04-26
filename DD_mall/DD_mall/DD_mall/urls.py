@@ -15,9 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include, register_converter
-from utils.converters import UsernameConverter
 
-register_converter(UsernameConverter, 'username')
+# from utils.converters import UsernameConverter
+# register_converter(UsernameConverter, 'username')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
