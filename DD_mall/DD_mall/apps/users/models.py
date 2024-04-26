@@ -3,7 +3,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    mobile = models.CharField(max_length=10, unique=True, verbose_name='mobile')
+    mobile = models.CharField(max_length=10, unique=True, null=True, verbose_name='mobile')
 
     class Meta:
         db_table = 'tb_user'

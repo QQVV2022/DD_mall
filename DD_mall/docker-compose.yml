@@ -1,7 +1,7 @@
 version: '3.9'
 
 services:
-  backend2:
+  backend:
     build:
       context: .
     command: >
@@ -40,8 +40,8 @@ services:
       - MYSQL_PASSWORD=root
       - MYSQL_ROOT_PASSWORD=root
 
-  redis:
+  cache:
     image: "redis:alpine"
     restart: always
     ports:
-      - 63799:6379
+      - 63790:6379

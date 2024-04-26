@@ -44,12 +44,12 @@ var vm = new Vue({
 		},
         // 检查用户名
         check_username: function () {
-            var re = /^[a-zA-Z0-9_-]{5,20}$/;
+            var re = /^[a-zA-Z0-9_-]{3,20}$/;
             var re2 = /^[0-9]+$/;
             if (re.test(this.username) && !re2.test(this.username)) {
                 this.error_name = false;
             } else {
-                this.error_name_message = '请输入5-20个字符的用户名且不能为纯数字';
+                this.error_name_message = '请输入3-20个字符的用户名且不能为纯数字';
                 this.error_name = true;
             }
             // 检查重名
@@ -75,7 +75,7 @@ var vm = new Vue({
         },
         check_pwd: function () {
             var len = this.password.length;
-            if (len < 8 || len > 20) {
+            if (len < 3 || len > 20) {
                 this.error_password = true;
             } else {
                 this.error_password = false;
@@ -90,12 +90,13 @@ var vm = new Vue({
         },
         // 检查手机号
         check_phone: function () {
-            var re = /^1[345789]\d{9}$/; //email /^\S+@\S+\.\S+$/
+            var re = /^\S+@\S+\.\S+$/ // phone /^1[345789]\d{9}$/; //email /^\S+@\S+\.\S+$/
+            var re
 
             if (re.test(this.mobile)) {
                 this.error_phone = false;
             } else {
-                this.error_phone_message = '您输入的手机号格式不正确';
+                this.error_phone_message = '您输入的邮箱格式不正确';
                 this.error_phone = true;
             }
             if (this.error_phone == false) {
@@ -106,7 +107,7 @@ var vm = new Vue({
                 })
                     .then(response => {
                         if (response.data.count > 0) {
-                            this.error_phone_message = '手机号已存在';
+                            this.error_phone_message = '邮箱已存在';
                             this.error_phone = true;
                         } else {
                             this.error_phone = false;
@@ -211,7 +212,7 @@ var vm = new Vue({
                     username: this.username,
                     password: this.password,
                     password2: this.password2,
-                    mobile: this.mobile,
+                    email: this.mobile, // not mobile
                     sms_code: this.sms_code,
                     allow: this.allow
                 }, {

@@ -23,8 +23,9 @@ $open -a Docker
 $docker compose up
 $docker stop dd_mall-backend2-1 dd_mall-db-1 dd_mall-redis-1
 
+$open -a Docker
 $docker container start dd_mall-db-1 dd_mall-redis-1
-$docker start -a dd_mall-backend2-1
+$docker start -a dd_mall-backend-1
 
 $docker rm dd_mall-db-1 dd_mall-backend-1
 $docker rmi dd_mall-backend
@@ -32,7 +33,7 @@ $docker rmi dd_mall-backend
 $docker exec -it dd_mall-backend-1 sh
 $docker exec -it dd_mall-db-1 /bin/bash
 
-on mysql cotainer:
+on mysql container:
 $mysql -u root -p qmall
 on backend container:
 $ mysql -P 3306 -h db --protocol=tcp -u root -p qmall
