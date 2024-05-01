@@ -57,12 +57,12 @@ class CreateUserSerializer(serializers.ModelSerializer):
 
         redis_conn = get_redis_connection('verify_codes')  # config in settings
         email = attrs.get('email').lower()
-        # email_code = redis_conn.get(f'code_{email}')
-        # if email_code is None:
-        #     raise serializers.ValidationError('Verification code is invalid!')
-        #
-        # if attrs['sms_code'] != email_code.decode():  # front end emai code [sms_code] and redis email code compare
-        #     raise serializers.ValidationError('Verification code is invalid!')
+        email_code = redis_conn.get(f'code_{email}')
+        if email_code is None:
+            raise serializers.ValidationError('Verification code is invalid!')
+
+        if attrs['sms_code'] != email_code.decode():  # front end emai code [sms_code] and redis email code compare
+            raise serializers.ValidationError('Verification code is invalid!')
         return attrs
 
     def create(self, validated_data):
@@ -73,7 +73,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
         validated_data.pop('password2')
         validated_data.pop('allow')
         validated_data.pop('sms_code')
-        print('validated_data**',validated_data)
+        # print('validated_data**',validated_data)
 
         user = User.objects.create_user(**validated_data)
 

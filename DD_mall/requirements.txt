@@ -13,3 +13,4 @@ typing_extensions==4.10.0
 uWSGI>=2.0.19.1,<2.1
 djangorestframework-jwt
 pillow
+celery
