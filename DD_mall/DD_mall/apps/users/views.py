@@ -6,7 +6,7 @@ from rest_framework.views import APIView
 from .models import User
 from .serializers import CreateUserSerializer
 
-import re
+import random
 from django_redis import get_redis_connection
 from django.http import HttpResponse
 
@@ -76,8 +76,18 @@ class ImagecodeView(APIView):
         from utils.captcha.captcha import captcha
         _, text, image = captcha.generate_captcha()
         redis_conn = get_redis_connection("verify_codes")
-        redis_conn.setex(f"ImageCode_image_code_id", 300, text)
+        redis_conn.setex(f"Image_ode_{image_code_id}", 300, text)
         return HttpResponse(image, content_type="image/jpeg")
+
+
+class EmailcodeView(APIView):
+    def get(self, request, email):
+        redis_conn = get_redis_connection("verify_codes")
+        code = "".join([str(random.randint(0, 9)) for i in range(6)])
+        redis_conn.setex(f"code_{email}", 6000, code)
+        from celery_tasks.email_task import send_email_code
+        send_email_code.delay(email, code)  # Todo: set up celery sever
+        return Response({'code': 200, 'message': 'ok'})
 
 class CreateUserAPIView(APIView):
     def post(self, request):
