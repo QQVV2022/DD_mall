@@ -7,6 +7,8 @@ from .models import User
 from .serializers import CreateUserSerializer
 
 import re
+from django_redis import get_redis_connection
+from django.http import HttpResponse
 
 
 
@@ -64,11 +66,22 @@ class EmailCountView(APIView):
         count = User.objects.filter(email=emailname).count()
         return Response({'count': count, 'email': emailname, 'errmsg': 'ok'})
 
+
+class ImagecodeView(APIView):
+    '''
+    image code
+    '''
+
+    def get(self, request, image_code_id):
+        from utils.captcha.captcha import captcha
+        _, text, image = captcha.generate_captcha()
+        redis_conn = get_redis_connection("verify_codes")
+        redis_conn.setex(f"ImageCode_image_code_id", 300, text)
+        return HttpResponse(image, content_type="image/jpeg")
+
 class CreateUserAPIView(APIView):
     def post(self, request):
-        print("****",request.data)
         serializer = CreateUserSerializer(data=request.data)
-        print('-----',serializer)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response({'errmsg': 'ok', 'code': 0}, status=status.HTTP_201_CREATED)  # fron end code == 0 means success in Line 223

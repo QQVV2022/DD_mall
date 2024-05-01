@@ -35,7 +35,7 @@ EXPOSE 8000
 
 ENV PATH="/scripts:/py/bin:$PATH"
 
-USER app
+#USER app
 
 ## production?
 #CMD ["run.sh"]

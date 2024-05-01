@@ -1,24 +1,12 @@
-from .views import UsernameCountView, EmailCountView, CreateUserAPIView
+from .views import UsernameCountView, EmailCountView, ImagecodeView, CreateUserAPIView
 from django.urls import path
 from django.conf.urls import url
 
 urlpatterns = [
-#     path('products', ProductViewSet.as_view({
-#         'get': 'list',
-#         'post': 'create'
-#     })),
-#     path('products/<str:pk>', ProductViewSet.as_view({
-#         'get': 'retrieve',
-#         'put': 'update',
-#         'delete': 'destroy'
-#     })),
-#     url(r'^usernames/(?P<username>\w{3,20})/count/$',UsernameCountView.as_view()),
-#     url(r'^mobiles/<str:email>/count/$',EmailCountView.as_view()),
     path('mobiles/<emailname>/count/', EmailCountView.as_view()),
     path('usernames/<username>/count/', UsernameCountView.as_view()),
+    path('image_codes/<image_code_id>/', ImagecodeView.as_view()),
     path('register/', CreateUserAPIView.as_view()),
-
-
 
 ]
 
