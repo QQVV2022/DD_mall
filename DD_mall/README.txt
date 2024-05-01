@@ -7,7 +7,8 @@ https://github.com/scalablescripts/python-microservices/tree/main
 
 Set up virtual env:
 $pip install virtualenv #python -m venv
-$mkdir projectA $cd projectA
+$mkdir projectA
+$cd projectA
 $python3.9 -m venv env
 
 $source env/bin/activate
@@ -21,16 +22,16 @@ $pip install -r requirements.txt
 Docker run:
 $open -a Docker
 $docker compose up
-$docker stop dd_mall-backend2-1 dd_mall-db-1 dd_mall-redis-1
+$docker stop dd_mall-backend3-1 dd_mall-db-1 dd_mall-redis-1
 
 $open -a Docker
 $docker container start dd_mall-db-1 dd_mall-redis-1
 $docker start -a dd_mall-backend-1
 
-$docker rm dd_mall-db-1 dd_mall-backend-1
+$docker rm dd_mall-db-1 dd_mall-backend3-1
 $docker rmi dd_mall-backend
 
-$docker exec -it dd_mall-backend-1 sh
+$docker exec -it dd_mall-backend3-1 sh
 $docker exec -it dd_mall-db-1 /bin/bash
 
 on mysql container:
@@ -40,7 +41,7 @@ $ mysql -P 3306 -h db --protocol=tcp -u root -p qmall
 on mac:
 $ mysql -P 33066 --protocol=tcp -u root -p qmall --ssl-mode=DISABLED
 
-REDIS:
+REDIS - do not use:
 use this docker images for testing, not in docker file -
 $docker run -d --name my-redis -p 63798:6379 redis:alpine
 $docker exec -it my-redis bash

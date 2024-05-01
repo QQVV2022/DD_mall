@@ -73,6 +73,7 @@ class CreateUserSerializer(serializers.ModelSerializer):
         validated_data.pop('password2')
         validated_data.pop('allow')
         validated_data.pop('sms_code')
+        print('validated_data**',validated_data)
 
         user = User.objects.create_user(**validated_data)
 
