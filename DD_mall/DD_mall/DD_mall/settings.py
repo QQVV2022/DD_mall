@@ -246,10 +246,12 @@ JWT_AUTH = {
 
 # Email settings
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = config('EMAIL_HOST')
-EMAIL_PORT = config('EMAIL_PORT')
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
-EMAIL_FROM = config('EMAIL_FROM')
+EMAIL_HOST = config('EMAIL_HOST').replace("'", "")
+EMAIL_PORT = int(config('EMAIL_PORT'))
+EMAIL_HOST_USER = config('EMAIL_HOST_USER').replace("'", "")
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD').replace("'", "")
+EMAIL_FROM = config('EMAIL_FROM').replace("'", "")
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
+
+

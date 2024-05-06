@@ -49,7 +49,7 @@ var vm = new Vue({
             if (re.test(this.username) && !re2.test(this.username)) {
                 this.error_name = false;
             } else {
-                this.error_name_message = '请输入3-20个字符的用户名且不能为纯数字';
+                this.error_name_message = 'Password length must between 3-20, and cannot be all numbers';
                 this.error_name = true;
             }
             // 检查重名
@@ -62,7 +62,7 @@ var vm = new Vue({
                 })
                     .then(response => {
                         if (response.data.count > 0) {
-                            this.error_name_message = '用户名已存在';
+                            this.error_name_message = 'Username existed!';
                             this.error_name = true;
                         } else {
                             this.error_name = false;
@@ -96,7 +96,7 @@ var vm = new Vue({
             if (re.test(this.mobile)) {
                 this.error_phone = false;
             } else {
-                this.error_phone_message = '您输入的邮箱格式不正确';
+                this.error_phone_message = 'email format incorrect!';
                 this.error_phone = true;
             }
             if (this.error_phone == false) {
@@ -107,7 +107,7 @@ var vm = new Vue({
                 })
                     .then(response => {
                         if (response.data.count > 0) {
-                            this.error_phone_message = '邮箱已存在';
+                            this.error_phone_message = 'Email existed!';
                             this.error_phone = true;
                         } else {
                             this.error_phone = false;
@@ -121,7 +121,7 @@ var vm = new Vue({
         // 检查图片验证码
 		check_image_code: function (){
 			if(!this.image_code) {
-				this.error_image_code_message = '请填写图片验证码';
+				this.error_image_code_message = 'Please enter image verification code!';
 				this.error_image_code = true;
 			} else {
 				this.error_image_code = false;
@@ -129,7 +129,7 @@ var vm = new Vue({
 		},
         check_sms_code: function () {
             if (!this.sms_code) {
-                this.error_sms_code_message = '请填写短信验证码';
+                this.error_sms_code_message = 'Please enter email verification code!';
                 this.error_sms_code = true;
             } else {
                 this.error_sms_code = false;
@@ -174,7 +174,7 @@ var vm = new Vue({
                             // 如果计时器到最后, 清除计时器对象
                             clearInterval(t);
                             // 将点击获取验证码的按钮展示的文本回复成原始文本
-                            this.sms_code_tip = '获取短信验证码';
+                            this.sms_code_tip = 'Get email verification code';
                             // 将点击按钮的onclick事件函数恢复回去
                             this.sending_flag = false;
                         } else {
@@ -200,7 +200,7 @@ var vm = new Vue({
             this.check_pwd();
             this.check_cpwd();
             this.check_phone();
-            // this.check_sms_code();
+            this.check_sms_code();
             this.check_allow();
 
 
@@ -232,7 +232,7 @@ var vm = new Vue({
                             if ('non_field_errors' in error) {
                                 this.error_sms_code_message = error.response;
                             } else {
-                                this.error_sms_code_message = '数据有误';
+                                this.error_sms_code_message = 'Data Error!';
                             }
                             this.error_sms_code = true;
                         } else {

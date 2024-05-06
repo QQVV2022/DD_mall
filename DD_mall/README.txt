@@ -51,5 +51,10 @@ $redis-cli -h 127.0.0.1 -p 63798
 front end run:
 $npm install -g live-server
 config the hose in js/host.js
-$ cd web/static
+$cd web/static
 $live-server
+
+----Celery worker/consumer start--
+$ cd celery_tasks  # sometimes do not need it
+$ celery -A celery_tasks.main worker -l INFO
+

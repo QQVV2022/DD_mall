@@ -1,1 +1,1 @@
-broker_url = "redis:cache:6379/5"
+broker_url = "redis://cache:6379/5"
