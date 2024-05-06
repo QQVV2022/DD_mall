@@ -52,15 +52,17 @@ class CreateUserSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError('Please check the agreement!')
         return allow
     def validate(self, attrs):
+
         if not attrs.get('password') or attrs.get('password') != attrs.get('password2'):
             raise serializers.ValidationError('Password length cannot be 0 or Passwords do not match!')
-
-        redis_conn = get_redis_connection('verify_codes')  # config in settings
         email = attrs.get('email').lower()
+        count = User.objects.filter(email=email).count()
+        if count > 0:
+            raise serializers.ValidationError('Email existed!')
+        redis_conn = get_redis_connection('verify_codes')  # config in settings
         email_code = redis_conn.get(f'code_{email}')
         if email_code is None:
             raise serializers.ValidationError('Verification code is invalid!')
-
         if attrs['sms_code'] != email_code.decode():  # front end emai code [sms_code] and redis email code compare
             raise serializers.ValidationError('Verification code is invalid!')
         return attrs
